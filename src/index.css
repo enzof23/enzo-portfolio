@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 23, 23, 23;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.gradient-shadow {
+  animation: gradient-shadow 300ms ease-in;
+  box-shadow:
+    0 0 6px rgba(255, 255, 0, 0.8),
+    0 0 8px rgba(186, 85, 211, 0.8),
+    0 0 10px rgba(0, 0, 139, 0.8);
+}
+
+.width110 {
+  animation: width110 200ms ease-out;
+}
+
+.width150 {
+  animation: width150 200ms ease-out;
+}
+
+.image-grow {
+  animation: image-grow 200ms ease-in;
+  transform: scale(1);
+}
+
+@keyframes gradient-shadow {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow:
+      0 0 6px rgba(255, 255, 0, 0.8),
+      0 0 8px rgba(186, 85, 211, 0.8),
+      0 0 10px rgba(0, 0, 139, 0.8);
+  }
+}
+
+@keyframes image-grow {
+  from {
+    transform: scale(0.7);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes width110 {
+  from {
+    width: 58px;
+  }
+
+  to {
+    width: 110px;
+  }
+}
+
+@keyframes width150 {
+  0% {
+    width: 58px;
+  }
+  100% {
+    width: 150px;
+  }
+}
