@@ -20,6 +20,21 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.font-nunito {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.bonjour-div {
+  animation: bonjour-div 1s linear forwards;
+  animation-delay: 5s;
+  display: grid;
+  place-items: center;
+}
+
+.bonjour-text {
+  animation: bonjour-text 5s ease-in forwards;
+}
+
 .gradient-shadow {
   animation: gradient-shadow 300ms ease-in;
   box-shadow:
@@ -28,17 +43,31 @@ body {
     0 0 10px rgba(0, 0, 139, 0.8);
 }
 
-.width110 {
-  animation: width110 200ms ease-out;
-}
-
-.width150 {
-  animation: width150 200ms ease-out;
-}
-
 .image-grow {
   animation: image-grow 200ms ease-in;
   transform: scale(1);
+}
+
+@keyframes bonjour-div {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes bonjour-text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes gradient-shadow {
@@ -61,24 +90,5 @@ body {
 
   to {
     transform: scale(1);
-  }
-}
-
-@keyframes width110 {
-  from {
-    width: 58px;
-  }
-
-  to {
-    width: 110px;
-  }
-}
-
-@keyframes width150 {
-  0% {
-    width: 58px;
-  }
-  100% {
-    width: 150px;
   }
 }
